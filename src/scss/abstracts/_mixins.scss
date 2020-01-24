@@ -1,0 +1,59 @@
+// Mixins
+
+// PX to REM - Usage: font-size: rem(37px);
+@function rem($px, $base: $baseFontSize) {
+    @return ($px / $base) * 1rem;
+}
+
+//set fonts
+@mixin font($family: $raleway, $size: $baseFontSize, $weight:400, $color:black) {
+    font-family: $family;
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
+
+// pseudoelemnt
+@mixin pseudo($display: block, $pos: absolute, $content: '') {
+    content: $content;
+    display: $display;
+    position: $pos;
+}
+
+@mixin position($position: absolute, $display: block, $content: '', $left: null, $right: null, $top: null, $bottom: null) {
+    position: $position;
+    display: $display;
+    content: $content;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+// setup size
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+// basic flex center
+@mixin flex_center() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// basic setup flexbox
+@mixin flex($display, $align, $justify, $direction:auto) {
+    display: $display;
+    align-items: $align;
+    justify-content: $justify;
+
+    @if $direction=='column' {
+        flex-direction: column;
+    }
+
+    @else if $direction=='auto' {
+        flex-direction: row;
+    }
+}

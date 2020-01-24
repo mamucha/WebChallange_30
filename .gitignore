@@ -1,0 +1,8 @@
+node_modules
+package-lock.json
+package.json
+webpack.config.js
+.idea
+.sass-cache
+Thumbs.db
+30.psd
