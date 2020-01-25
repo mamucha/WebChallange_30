@@ -1,0 +1,47 @@
+.c-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+
+    &__box {
+        position: relative;
+        cursor: pointer;
+        transition: .5s all ease-in-out;
+
+
+        &:after {
+            @include position($top:0, $left:0);
+            @include size(100%);
+            transition: .5s all ease-in-out;
+
+        }
+
+        &:hover:after {
+            background-color: rgba(0, 0, 0, .6);
+        }
+
+        &:hover .c-gallery__text {
+            opacity: 1;
+            transform: scale(1.2);
+        }
+
+        & img {
+            @include size(100%);
+        }
+
+    }
+
+    &__text {
+        @include position($top:0, $left:0);
+        @include flex_center();
+        @include size(100%);
+        font-family: Roboto;
+        color: #fff;
+        font-size: 34px;
+        font-weight: 300;
+        text-transform: uppercase;
+        opacity: 0;
+        z-index: 1;
+        transition: 1s all ease-in-out;
+    }
+}
