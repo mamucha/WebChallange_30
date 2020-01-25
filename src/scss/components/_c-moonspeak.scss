@@ -1,0 +1,26 @@
+.c-moonspeak {
+    display: flex;
+    align-items: center;
+
+
+    &__text {
+        height: 400px;
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 130px;
+    }
+
+    &__title {
+        color: #290a59;
+        font-size: 14px;
+        letter-spacing: 5.6px;
+        text-transform: uppercase;
+    }
+
+    &__subtitle {
+        color: #6d6081;
+        font-size: 14px;
+    }
+}
