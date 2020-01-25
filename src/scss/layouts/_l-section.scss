@@ -19,6 +19,14 @@
         &--monospeak {
             max-width: 1680px;
         }
+
+        &--footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+
     }
 
     &--intro {
@@ -43,5 +51,10 @@
 
     &--contact {
         background-color: #353535;
+    }
+
+    &--footer {
+        background-color: #efeee9;
+        padding: 50px 0;
     }
 }
