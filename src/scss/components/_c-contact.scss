@@ -1,0 +1,43 @@
+.c-contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    &__adress {
+        width: 343px;
+        height: 256px;
+        color: #ffffff;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 24px;
+
+    }
+
+    &__info {
+        margin-bottom: 20px;
+    }
+
+    &__phone {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        
+        & b {
+            font-weight: 700;
+        }
+    }
+
+    &__email {
+        display: flex;
+        flex-direction: column;
+
+        & b {
+            font-weight: 700;
+        }
+    }
+
+    // &__map {
+    //     @include size(100%);
+    // }
+}
