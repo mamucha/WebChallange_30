@@ -11,6 +11,13 @@
         background-color: #ffffff;
     }
 
+    &--info {
+        width: 760px;
+        text-align: center;
+        color: #222222;
+        font-weight: 400;
+    }
+
     &__title {
         color: #444444;
         font-family: "Roboto Slab";
@@ -30,6 +37,14 @@
         width: 722px;
         margin-bottom: 70px;
         text-align: justify;
+    }
+
+    &__text {
+        color: #222222;
+        font-family: "Roboto-thin";
+        font-size: 36px;
+        font-weight: 400;
+        letter-spacing: 0.18px;
     }
 
 }

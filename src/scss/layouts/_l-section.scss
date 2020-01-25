@@ -12,7 +12,11 @@
         }
 
         &--gallery {
-            max-width: 1680px;  
+            max-width: 1680px;
+        }
+
+        &--info {
+            padding: 200px 0;
         }
     }
 
@@ -29,7 +33,9 @@
         background-color: #efeee9;
     }
 
-    &--gallery {
-       
+    &--info {
+        background-color: #efeee9;
+        display: flex;
+        justify-content: center;
     }
 }
