@@ -1,0 +1,12 @@
+.c-intro {
+
+    &__text {
+        @include position($bottom:100px, $right:285px);
+        color: #333333;
+        font-family: Roboto;
+        font-size: 24px;
+        font-weight: 300;
+        width: 540px;
+        text-align: right;
+    }
+}
