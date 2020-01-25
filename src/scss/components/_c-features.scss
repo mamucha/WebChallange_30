@@ -1,0 +1,44 @@
+.c-features {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+    &__box {
+        color: #222222;
+        @include size(320px, 430px);
+        background-color: #ffffff;
+        margin: 0 15px;
+        padding: 12px 0;
+        @include flex($display:flex, $align:center, $direction:column, $justify:space-around);
+        text-align: center;
+
+        &:nth-child(3) {
+            margin-right: 0;
+        }
+
+        &:nth-child(1) {
+            margin-left: 0;
+        }
+    }
+
+    &__title {
+        width: 195px;
+        font-size: 18px;
+        font-weight: 700;
+
+    }
+
+    &__text {
+        width: 250px;
+        font-size: 16px;
+        font-weight: 300;
+    }
+
+    &__link {
+        color: #4eaeff;
+        font-size: 16px;
+        font-weight: 400;
+        text-decoration: underline;
+    }
+}
