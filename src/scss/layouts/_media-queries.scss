@@ -2,20 +2,19 @@
 @media only screen and (min-width: 460px) {}
 
 // Small screen > 640px
-@media only screen and (min-width: 640px) {
-}
+@media only screen and (min-width: 640px) {}
 
-// Medium screen > 768px
-@media only screen and (min-width: 768px) {
-
+// Medium screen < 768px
+@media only screen and (max-width: 768px) {
+    @include l-header\@screen_medium;
+    @include c-menu\@screen_medium;
+  
 }
 
 
 // Wide screen > 1024px
-@media only screen and (min-width: 1024px) {
-}
+@media only screen and (min-width: 1024px) {}
 
 
 // Mega screen > 1280px
-@media only screen and (min-width: 1280px) {
-}
+@media only screen and (min-width: 1280px) {}

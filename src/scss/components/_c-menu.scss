@@ -67,3 +67,88 @@
         }
     }
 }
+
+
+// media queries
+// screen <  768px
+@mixin c-menu\@screen_medium {
+    .c-menu {
+
+        &__burger {
+            @include position($right:5%, $top:50%);
+            cursor: pointer;
+            transform: translate(-5%, -50%);
+            z-index: 2;
+
+            &--line {
+                @include size(40px, 6px);
+                background: #ffffff;
+                border-radius: 9px;
+                margin: 5px;
+                transition: .5s all ease-in-out;
+            }
+
+            &--close {
+                div:nth-child(1) {
+                    transform: rotate(-45deg) translate(-10px, 8px);
+                }
+
+                div:nth-child(2) {
+                    opacity: 0;
+                }
+
+                div:nth-child(3) {
+                    transform: rotate(45deg) translate(-7px, -6px);
+                }
+            }
+        }
+
+        &__list {
+            position: fixed;
+            background: #353535;
+            height: 100vh;
+            width: 100%;
+            flex-direction: column;
+            justify-content: space-around;
+            color: #fff;
+            clip-path: circle(100px at 90% -10%);
+            transition: all 1s ease-out;
+            pointer-events: none;
+            padding: 80px 0;
+
+            &--open {
+                clip-path: circle(1000px at 90% -10%);
+                -webkit-clip-path: circle(1000px at 90% -10%);
+                pointer-events: all;
+            }
+        }
+
+        &__item {
+            opacity: 0;
+            font-size: 24px;
+
+            &:nth-child(1) {
+                transition: all 0.5s ease 0.3s;
+            }
+
+            &:nth-child(2) {
+                transition: all 0.5s ease 0.4s;
+            }
+
+            &:nth-child(3) {
+                transition: all 0.5s ease 0.5s;
+            }
+
+            &:nth-child(4) {
+                transition: all 0.5s ease 0.6s;
+            }
+            &:nth-child(5) {
+                transition: all 0.5s ease 0.7s;
+            }
+
+            &--fade {
+                opacity: 1;
+            }
+        }
+    }
+}

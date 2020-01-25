@@ -7,5 +7,25 @@
 
     &__box {
         font-size: 32px;
+        transition: .4s all ease-in-out;
+
+        &:hover {
+            &:nth-child(1) {
+                
+                color: #1DA1F2;
+            }
+
+            &:nth-child(2) {
+                color: #3b5998;
+            }
+
+            &:nth-child(3) {
+                color: #c13584;
+            }
+
+            &:nth-child(4) {
+                color: #DB4437;
+            }
+        }
     }
 }
