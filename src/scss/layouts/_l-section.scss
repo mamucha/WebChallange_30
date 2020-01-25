@@ -6,6 +6,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
+
+        &--about {
+            padding: 185px 0;
+        }
     }
 
     &--intro {
@@ -15,6 +19,9 @@
         background-position: top;
         background-repeat: no-repeat;
         position: relative;
+    }
 
+    &--about {
+        background-color: #efeee9;
     }
 }
