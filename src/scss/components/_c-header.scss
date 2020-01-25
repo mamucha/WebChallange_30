@@ -13,7 +13,8 @@
     }
 
     &--info {
-        width: 760px;
+        max-width: 760px;
+        width: 80%;
         text-align: center;
         color: #222222;
         font-weight: 400;

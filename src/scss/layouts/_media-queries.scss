@@ -3,8 +3,10 @@
   
 }
 
-// Small screen > 640px
-@media only screen and (min-width: 640px) {}
+// Small screen < 640px
+@media only screen and (max-width: 600px) {
+    @include c-gallery\@screen_small;
+}
 
 // Medium screen < 768px
 @media only screen and (max-width: 768px) {

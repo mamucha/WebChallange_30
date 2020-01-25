@@ -45,3 +45,24 @@
         transition: 1s all ease-in-out;
     }
 }
+
+
+// media queries
+//screen < 640px
+@mixin c-gallery\@screen_small {
+    
+    .c-gallery {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+
+// screen <  1024px
+@mixin c-gallery\@screen_wide {
+
+    .c-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
