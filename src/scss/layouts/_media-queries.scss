@@ -14,10 +14,12 @@
 }
 
 
-// Wide screen > 1024px
+// Wide screen < 1024px
 @media only screen and (max-width: 1024px) {
 @include l-section\@screen_wide;
 @include c-intro\@screen_wide;
+@include c-header\@screen_wide;
+@include c-gallery\@screen_wide;
 }
 
 

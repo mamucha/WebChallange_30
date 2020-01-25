@@ -6,9 +6,10 @@
     flex-wrap: wrap;
 
     &--about {
-        width: 1109px;
-        height: 612px;
+        max-width: 1110px;
+        width: 100%;
         background-color: #ffffff;
+        padding: 60px 0;
     }
 
     &--info {
@@ -34,7 +35,8 @@
         font-size: 20px;
         font-weight: 300;
         line-height: 28px;
-        width: 722px;
+        max-width: 722px;
+        width: 100%;
         margin-bottom: 70px;
         text-align: justify;
     }
@@ -47,4 +49,17 @@
         letter-spacing: 0.18px;
     }
 
+}
+
+
+
+// media queries
+// screen <  1024px
+@mixin c-header\@screen_wide{
+    .c-header {
+
+        &__subtitle {
+            width: 75%;
+        }
+    }
 }
