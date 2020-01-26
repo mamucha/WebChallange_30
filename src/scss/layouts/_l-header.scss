@@ -7,6 +7,12 @@
     width: 100%;
     position: fixed;
     @include flex_center();
+    transition: .4s all ease-in-out;
+
+    &--sticky {
+        height: 80px;
+        opacity: 1;
+    }
 
 
     &__wrapper {
