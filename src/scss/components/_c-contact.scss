@@ -1,7 +1,8 @@
 .c-contact {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    width: 100%;
 
 
     &__adress {
@@ -34,5 +35,29 @@
         & b {
             font-weight: 700;
         }
+    }
+}
+
+
+// media queries
+// screen < 1024px
+@mixin c-contact\@screen_wide {
+
+    .c-contact {
+        flex-direction: column;
+        width: 80%;
+
+        &__adress {
+            margin: 30px;
+        }
+
+        &__map {
+            margin-bottom: 30px;
+
+            & img {
+                width: 100%;
+            }
+        }
+
     }
 }

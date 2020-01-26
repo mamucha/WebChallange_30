@@ -11,10 +11,11 @@
 
         &--about {
             padding: 185px 0;
-            width: 80%;
+            width: 90%;
         }
 
         &--gallery {
+            padding: 0;
             max-width: 1680px;
         }
 
@@ -24,8 +25,10 @@
 
         &--footer {
             display: flex;
+            flex-direction: row;
             align-items: center;
             justify-content: space-between;
+            width: 80%;
         }
 
 
@@ -71,6 +74,31 @@
 
         &--intro {
             background-position: 100% 100%;
+        }
+    }
+}
+
+@mixin l-section\@screen_small {
+
+    .l-section {
+        &__wrapper {
+            &--info {
+                padding: 0;
+            }
+        }
+    }
+}
+
+
+// screen <  460px
+@mixin l-section\@screen_tiny {
+
+    .l-section {
+        &__wrapper {
+            &--footer {
+                flex-direction: column;
+
+            }
         }
     }
 }

@@ -29,3 +29,12 @@
         }
     }
 }
+
+
+
+// screen <  460px
+@mixin c-socials\@screen_tiny {
+    .c-socials {
+        padding-bottom: 20px;
+    }
+}
