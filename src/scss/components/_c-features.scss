@@ -2,11 +2,13 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 95%;
 
 
     &__box {
         color: #222222;
-        @include size(350px, 430px);
+        max-width: 350px;
+        @include size(100%, 430px);
         background-color: #ffffff;
         margin: 0 15px;
         padding: 12px 0;
@@ -40,5 +42,29 @@
         font-size: 16px;
         font-weight: 400;
         text-decoration: underline;
+    }
+}
+
+
+
+// media queries
+//screen < 1024px
+@mixin c-features\@screen_mega {
+
+    .c-features {
+        flex-direction: column;
+
+        &__box {
+            width: 95%;
+            margin: 10px;
+
+            &:nth-child(3) {
+                margin-right: 10px;
+            }
+
+            &:nth-child(1) {
+                margin-left: 10px;
+            }
+        }
     }
 }

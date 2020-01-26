@@ -2,10 +2,15 @@
     display: flex;
     align-items: center;
 
+    &__pic {
+        & img {
+            width: 100%;
+        }
+    }
 
     &__text {
         height: 400px;
-        width: 300px;
+        max-width: 300px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -22,5 +27,29 @@
     &__subtitle {
         color: #6d6081;
         font-size: 14px;
+    }
+}
+
+
+// media queries
+//screen < 1024px
+@mixin c-moonspeak\@screen_wide {
+    .c-moonspeak {
+        flex-direction: column;
+
+        &__text {
+            text-align: center;
+            padding: 50px 0;
+            order: -1;
+            margin-left: 0;
+        }
+
+        &__title {
+            margin-bottom: 12px;
+        }
+
+        &__pic {
+            height: 80%;
+        }
     }
 }

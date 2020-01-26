@@ -1,7 +1,5 @@
 // Tiny screen > 460px
-@media only screen and (min-width: 460px) {
-  
-}
+@media only screen and (min-width: 460px) {}
 
 // Small screen < 640px
 @media only screen and (max-width: 600px) {
@@ -12,18 +10,20 @@
 @media only screen and (max-width: 768px) {
     @include l-header\@screen_medium;
     @include c-menu\@screen_medium;
-  
+
 }
 
 
 // Wide screen < 1024px
 @media only screen and (max-width: 1024px) {
-@include l-section\@screen_wide;
-@include c-intro\@screen_wide;
-@include c-header\@screen_wide;
-@include c-gallery\@screen_wide;
+    @include l-section\@screen_wide;
+    @include c-intro\@screen_wide;
+    @include c-header\@screen_wide;
+    @include c-gallery\@screen_wide;
+    @include c-moonspeak\@screen_wide;
+    @include c-features\@screen_mega;
 }
 
 
 // Mega screen > 1280px
-@media only screen and (min-width: 1280px) {}
+@media only screen and (max-width: 1280px) {}
