@@ -27,30 +27,43 @@
 
         & img {
             @include size(100%);
+            position: relative;
+        }
+
+        &--figcaption {
+            @include position($position: absolute,$top:20px,$left:20px, $left:20px,$right:20px);
+            background-color: rgba(0, 0, 0, .6);
+            transform: translateY(50%);
+            opacity: 0;
+            z-index: 3;
+            transition: .5s all ease-in-out;
+
+            & svg {
+                @include position($position: absolute,$top:50%,$left:50%);
+                transform: translate(-50%, -50%);
+                z-index: 3;
+                font-size: 100px;
+                color: #fff;
+                transition: .5s all ease-in-out;
+
+            }
+
+            &:hover {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
         }
 
     }
 
-    &__text {
-        @include position($top:0, $left:0);
-        @include flex_center();
-        @include size(100%);
-        font-family: Roboto;
-        color: #fff;
-        font-size: 34px;
-        font-weight: 300;
-        text-transform: uppercase;
-        opacity: 0;
-        z-index: 1;
-        transition: 1s all ease-in-out;
-    }
 }
 
 
 // media queries
 //screen < 640px
 @mixin c-gallery\@screen_small {
-    
+
     .c-gallery {
         grid-template-columns: 1fr !important;
     }
@@ -64,5 +77,3 @@
         grid-template-columns: repeat(2, 1fr);
     }
 }
-
-
