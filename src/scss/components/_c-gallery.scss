@@ -3,6 +3,34 @@
     grid-template-columns: repeat(3, 1fr);
     grid-auto-rows: auto;
 
+    &__img {
+        @include size(100%);
+        position: relative;
+    }
+
+    &__lightbox {
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        @include size(100%);
+        background-color: rgba(0, 0, 0, .8);
+        display: none;
+
+        &--active {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        & img {
+            max-width: 90%;
+            max-height: 80%;
+            padding: 4px;
+            background-color: black;
+            border: 2px solid white;
+        }
+    }
+
     &__box {
         position: relative;
         cursor: pointer;
@@ -13,51 +41,31 @@
             @include position($top:0, $left:0);
             @include size(100%);
             transition: .5s all ease-in-out;
+        }
 
+        &:before {
+            @include position($top:50%, $left:50%);
+            transform: translate(-50%, 0);
+            filter: invert(1);
+            z-index: 1;
+            @include size(50%);
+            transition: .5s all ease-in-out;
+        }
+
+        &:hover:before {
+            background-image: url(../img/eye-solid.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            transform: translate(-50%, -50%);
         }
 
         &:hover:after {
             background-color: rgba(0, 0, 0, .6);
         }
-
-        &:hover .c-gallery__text {
-            opacity: 1;
-            transform: scale(1.2);
-        }
-
-        & img {
-            @include size(100%);
-            position: relative;
-        }
-
-        &--figcaption {
-            @include position($position: absolute,$top:20px,$left:20px, $left:20px,$right:20px);
-            background-color: rgba(0, 0, 0, .6);
-            transform: translateY(50%);
-            opacity: 0;
-            z-index: 3;
-            transition: .5s all ease-in-out;
-
-            & svg {
-                @include position($position: absolute,$top:50%,$left:50%);
-                transform: translate(-50%, -50%);
-                z-index: 3;
-                font-size: 100px;
-                color: #fff;
-                transition: .5s all ease-in-out;
-
-            }
-
-            &:hover {
-                opacity: 1;
-                transform: translateY(0);
-            }
-
-        }
-
     }
-
 }
+
 
 
 // media queries
